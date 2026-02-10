@@ -54,7 +54,7 @@ const Footer = () => {
 
               <div className="flex items-start gap-2 text-gray-400 text-sm">
                 <FaMapMarkerAlt className="w-3.5 h-3.5 text-orange-500 mt-0.5" />
-                <p>4th Floor, C Wing, Parsn Manere, Anna Salai, Chennai - 600 006</p>
+                <p>C-11, Fourth Floor, C Wing, 602/442, Gemini Square (Parsn Manere),<br/>Anna Salai, Chennai - 600 006</p>
               </div>
             </div>
 

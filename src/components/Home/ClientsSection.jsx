@@ -51,7 +51,7 @@ const ClientsSection = () => {
   };
 
   return (
-    <section className="relative bg-[#050505] py-10 md:py-12 overflow-hidden">
+    <section className="relative py-10 md:py-12 overflow-hidden" style={{ background: 'linear-gradient(135deg, #0a1628 0%, #0d2847 50%, #0a1e3d 100%)' }}>
       
       <div ref={ref} className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         
@@ -119,7 +119,7 @@ const ClientsSection = () => {
                   {getCurrentClients().map((client, index) => (
                     <motion.div
                       key={`${currentIndex}-${index}`}
-                      className="group relative bg-[#0d0d0d] backdrop-blur-sm rounded-xl border border-gray-900 hover:border-orange-500/50 transition-all duration-500 hover:bg-[#111111] p-4"
+                      className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-orange-500/50 transition-all duration-500 hover:bg-white/10 p-4"
                     >
                       <div className="text-center">
                         <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 bg-white rounded-lg flex items-center justify-center overflow-hidden p-2">

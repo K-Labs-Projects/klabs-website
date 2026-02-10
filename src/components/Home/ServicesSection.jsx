@@ -25,7 +25,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-br from-orange-50 via-white to-orange-50/50 py-12 md:py-14 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-orange-50 via-white to-orange-50/50 py-20 md:py-24 overflow-hidden">
       
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-orange-200/20 rounded-full blur-3xl"></div>
@@ -38,7 +38,7 @@ const ServicesSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-8 md:mb-10"
+          className="text-center mb-12 md:mb-14"
         >
           <motion.p
             initial={{ opacity: 0 }}
@@ -99,7 +99,7 @@ const ServicesSection = () => {
                 ></motion.div>
 
                 {/* Learn More Link */}
-                <button className="flex items-center gap-2 text-sm font-medium text-gray-700">
+  <button className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors duration-200">
                   Learn More
                   <HiArrowRight className="w-4 h-4" />
                 </button>

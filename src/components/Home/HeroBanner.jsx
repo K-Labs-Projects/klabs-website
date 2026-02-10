@@ -11,7 +11,7 @@ const HeroBanner = () => {
     "Engineered for reliability",
     "Focused on real business outcomes",
     "Tailored for your needs",
-    "K LABS TECHNOLOGY"
+ 
   ];
 
   useEffect(() => {

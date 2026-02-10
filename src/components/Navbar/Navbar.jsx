@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
-
+import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [hovered, setHovered] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const menuItems = [
     { title: 'About Us', href: '#about' },
-    { title: 'Services', href: '#services' },
-    { title: 'Industries', href: '#industries' },
+    { title: 'Services', href: '/services', isRoute: true },
+{ title: 'Industries', href: '/industries', isRoute: true },
     { title: 'Insights', href: '#insights' },
     { title: 'Careers', href: '#careers' },
     { title: 'Contact Us', href: '#contact' },
   ];
-
+const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -24,33 +25,45 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleMenuClick = (href) => {
+const handleMenuClick = (href, isRoute) => {
     setMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (isRoute) {
+      navigate(href);
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+  };
+
+  const getNavbarClasses = () => {
+    if (hovered) {
+      return 'bg-white/95 shadow-lg backdrop-blur-md';
+    }
+    if (scrolled) {
+      return 'bg-white/20 shadow-md backdrop-blur-lg border-b border-white/20';
+    }
+    return 'bg-transparent';
   };
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 font-body ${
-        scrolled
-          ? 'bg-white/98 shadow-lg backdrop-blur-md'
-          : 'bg-white/95 shadow-md backdrop-blur-sm'
-      }`}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 font-body ${getNavbarClasses()}`}
     >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 py-4 lg:py-5 flex justify-between items-center">
+      <div className="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 py-2 lg:py-2.5 flex justify-between items-center">
         
         {/* Logo */}
         <div className="flex-shrink-0">
-          <div className="cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <div className="cursor-pointer" onClick={() => navigate('/')}>
             <motion.img
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
               src="/logo.png"
               alt="Company Logo"
-              className="h-12 md:h-14 lg:h-16 w-auto object-contain"
+              className="h-8 md:h-10 lg:h-11 w-auto object-contain"
             />
           </div>
         </div>
@@ -64,8 +77,8 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
             >
               <button
-                onClick={() => handleMenuClick(item.href)}
-                className="relative text-primary font-medium text-[15px] tracking-wide py-2 transition-colors duration-300 hover:text-orange-500 group"
+                onClick={() => handleMenuClick(item.href, item.isRoute)}
+                className="relative text-orange-500 font-medium text-[15px] tracking-wide py-2 transition-colors duration-300 hover:text-orange-600 group"
               >
                 {item.title}
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
@@ -77,7 +90,7 @@ const Navbar = () => {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 text-primary hover:text-orange-500 transition-colors duration-300"
+          className="lg:hidden p-2 text-orange-500 transition-colors duration-300 hover:text-orange-600"
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <HiX size={28} /> : <HiMenuAlt3 size={28} />}
@@ -103,7 +116,7 @@ const Navbar = () => {
                   transition={{ delay: index * 0.1 }}
                 >
                   <button
-                    onClick={() => handleMenuClick(item.href)}
+                    onClick={() => handleMenuClick(item.href, item.isRoute)}
                     className="w-full text-left block text-primary font-medium text-base py-3 px-4 rounded-lg border-b border-gray-50 transition-all duration-300 hover:bg-orange-50 hover:text-orange-500 hover:pl-6"
                   >
                     {item.title}
