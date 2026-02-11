@@ -11,9 +11,9 @@ const menuItems = [
     { title: 'About Us', href: '/about', isRoute: true },
     { title: 'Services', href: '/services', isRoute: true },
     { title: 'Industries', href: '/industries', isRoute: true },
-    { title: 'Insights', href: '#insights' },
-    { title: 'Careers', href: '#careers' },
-    { title: 'Contact Us', href: '#contact' },
+    { title: 'Insights', href: '/insights', isRoute: true },
+    { title: 'Careers', href: '/careers', isRoute: true },
+    { title: 'Contact Us', href: '/contactus', isRoute: true },
   ];
 const navigate = useNavigate();
   useEffect(() => {
