@@ -45,25 +45,11 @@ const BlogsSection = () => {
               initial={{ opacity: 0, x: -40 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="text-sm md:text-base font-medium tracking-[0.3em] text-orange-600 uppercase mb-3"
+              className="text-3xl md:text-4xl lg:text-[42px] font-normal text-orange-600 leading-tight mb-4 font-bold"
             >
               Our Blogs
             </motion.p>
-            <motion.h2
-              initial={{ opacity: 0, x: -60 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{
-                duration: 0.8,
-                delay: 0.15,
-                ease: [0.25, 0.46, 0.45, 0.94],
-              }}
-              className="text-3xl md:text-4xl lg:text-[42px] font-light text-gray-900 leading-tight font-sans"
-            >
-              Where intelligence meets{' '}
-              <span className="font-normal bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
-                real-world impact
-              </span>
-            </motion.h2>
+          
           </motion.div>
 
           {/* View All Button */}
@@ -107,7 +93,7 @@ const BlogsSection = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-lg md:text-xl font-medium text-gray-900 leading-snug mb-4 group-hover:text-orange-500 transition-colors duration-300 font-sans">
+              <h3 className="text-base md:text-lg font-medium text-gray-900 leading-snug mb-4 group-hover:text-orange-500 transition-colors duration-300 font-semibold">
                 {blog.title}
               </h3>
 

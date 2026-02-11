@@ -9,22 +9,23 @@ const ClientsSection = () => {
 
   // Client logos
   const clients = [
-    { name: "Namma School Namma Ooru Palli", logo: "NSNOP.png" },
-    { name: "Tamil Nadu Public Service Commission", logo: "TNLOGO.png" },
-    { name: "Registrar of Co-operative Societies", logo: "RCS.png" },
-    { name: "State Institute of Rural Development", logo: "TNLOGO.png" },
-    { name: "Directorate of Collegiate Education", logo: "TNLOGO.png" },
-    { name: "Department of School Education", logo: "TNLOGO.png" },
-    { name: "Government of Tamil Nadu", logo: "TNLOGO.png" },
-    { name: "Staff Selection Commission", logo: "SSC.png" },
-    { name: "Sports Development Authority of Tamil Nadu", logo: "SDAT2.png" },
-    { name: "Tamil Nadu Medical Services Corporation", logo: "tnmsc.png" },
-    { name: "Tamil Nadu Corporation for Development of Women", logo: "TNCDW.jpg" },
-    { name: "Adi Dravidar and Tribal Welfare Department", logo: "TNLOGO.png" },
-    { name: "Medical Recruitment Board", logo: "TNLOGO.png" },
-    { name: "Greater Chennai Police", logo: "GCP.png" },
 
-    { name: "Kerala State Electronics Development Corporation Limited", logo: "KELTRON.jpg" },
+
+{ name: "Adi Dravidar and Tribal Welfare Department", logo: "TNLOGO.png" },
+{ name: "Department of School Education", logo: "TNLOGO.png" },
+{ name: "Directorate of Collegiate Education", logo: "TNLOGO.png" },
+{ name: "Government of Tamil Nadu", logo: "TNLOGO.png" },
+{ name: "Greater Chennai Police", logo: "GCP.png" },
+  { name: "Kerala State Electronics Development Corporation Limited", logo: "KELTRON.jpg" },
+{ name: "Medical Recruitment Board", logo: "TNLOGO.png" },
+{ name: "Namma School Namma Ooru Palli", logo: "NSNOP.png" },
+{ name: "Registrar of Co-operative Societies", logo: "RCS.png" },
+{ name: "Sports Development Authority of Tamil Nadu", logo: "SDAT2.png" },
+{ name: "Staff Selection Commission", logo: "SSC.png" },
+{ name: "State Institute of Rural Development", logo: "TNLOGO.png" },
+{ name: "Tamil Nadu Corporation for Development of Women", logo: "TNCDW.jpg" },
+{ name: "Tamil Nadu Medical Services Corporation", logo: "tnmsc.png" },
+{ name: "Tamil Nadu Public Service Commission", logo: "TNLOGO.png" },
   ];
 
   const totalSlides = Math.ceil(clients.length / 3);
@@ -79,7 +80,7 @@ const ClientsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-2 font-sans"
+                className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2"
               >
                 Clients
               </motion.h2>
@@ -95,9 +96,9 @@ const ClientsSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="text-xs md:text-sm text-gray-200 leading-relaxed font-body font-light"
+                className="text-xs md:text-sm text-gray-200 leading-relaxed font-medium"
               >
-                Clients – the foremost pillar of our success. 34+ full service govt. departments as clients, 38+ govt. departments using our solution frameworks, reaching out to millions of citizens across India.
+                Clients – the foremost pillar of our success. 100+ full service govt. departments as clients, 100+ govt. departments using our solution frameworks, reaching out to millions of citizens across India.
               </motion.p>
             </div>
           </motion.div>
@@ -133,7 +134,7 @@ const ClientsSection = () => {
                             }}
                           />
                         </div>
-                        <p className="text-[10px] md:text-xs text-gray-300 font-medium leading-tight line-clamp-2 group-hover:text-orange-400 transition-colors">
+                        <p className="text-[10px] md:text-xs text-gray-300 font-semibold leading-tight line-clamp-2 group-hover:text-orange-400 transition-colors">
                           {client.name}
                         </p>
                       </div>

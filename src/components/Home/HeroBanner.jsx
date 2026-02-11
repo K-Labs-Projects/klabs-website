@@ -54,7 +54,7 @@ const HeroBanner = () => {
                 duration: 1.2, 
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
-              className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-wide leading-tight font-sans bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-200 to-white animate-gradient-x"
+              className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-normal tracking-wide leading-tight font-sans bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-200 to-white animate-gradient-x"
               style={{ 
                 textShadow: '0 4px 20px rgba(0,0,0,0.3)',
                 letterSpacing: '0.02em',

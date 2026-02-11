@@ -10,49 +10,49 @@ const IndustriesPage = () => {
       title: 'Retail',
       description:
         'Streamline operations, enhance customer experiences, and drive growth with smart retail solutions.',
-          image: "/images/web-dev.png"
+          image: "/images/industries1.png"
     },
     {
       title: 'Finance',
       description:
         'Secure, compliant financial platforms with real-time analytics and seamless transaction processing.',
-        image: "/images/web-dev.png"
+        image: "/images/industries2.png"
     },
     {
       title: 'Education',
       description:
         'Empower institutions with digital tools that transform learning, administration, and engagement.',
-           image: "/images/web-dev.png"
+           image: "/images/industries3.png"
     },
     {
       title: 'Legal',
       description:
         'Modernize legal workflows with secure document management, case tracking, and compliance automation.',
-         image: "/images/web-dev.png"
+         image: "/images/industries4.png"
     },
     {
       title: 'Healthcare',
       description:
         'Patient-centric digital health solutions for hospitals, clinics, and public health systems.',
-       image: "/images/web-dev.png"
+       image: "/images/industries5.png"
     },
     {
       title: 'Logistics',
       description:
         'Optimize supply chain, fleet management, and real-time tracking for efficient delivery operations.',
-           image: "/images/web-dev.png"
+           image: "/images/industries6.png"
     },
     {
       title: 'Manufacturing',
       description:
         'Smart factory solutions with IoT integration, production monitoring, and quality control systems.',
-      image: "/images/web-dev.png"
+      image: "/images/industries7.png"
     },
     {
       title: 'Government',
       description:
         'Drive digital transformation in public services with scalable, secure, citizen-centric platforms.',
-      image: "/images/web-dev.png"
+      image: "/images/industries8.png"
     },
   ];
 
@@ -77,9 +77,9 @@ const IndustriesPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl md:text-5xl font-light text-white font-sans"
+            className="text-3xl md:text-5xl font-medium text-white font-bold"
           >
-            Industries We Serve
+            Industries
           </motion.h1>
         </div>
       </div>
@@ -109,10 +109,10 @@ const IndustriesPage = () => {
 
                 {/* Content */}
                 <div className="p-5">
-                  <h3 className="text-base md:text-lg font-medium text-gray-900 mb-2 font-sans group-hover:text-orange-600 transition-colors duration-300">
+                  <h3 className="text-base md:text-lg font-medium text-gray-900 mb-2 font-semibold group-hover:text-orange-600 transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 leading-relaxed font-light text-sm mb-4">
+                  <p className="text-gray-500 leading-relaxed font-medium text-sm mb-4">
                     {item.description}
                   </p>
 

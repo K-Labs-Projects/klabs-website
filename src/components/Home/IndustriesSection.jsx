@@ -75,7 +75,7 @@ useEffect(() => {
             initial={{ opacity: 0, x: -60 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="text-3xl md:text-4xl lg:text-[42px] font-light text-white leading-tight mb-4 font-sans"
+            className="text-3xl md:text-4xl lg:text-[42px] font-normal text-white leading-tight mb-4 font-bold"
           >
             Industries
           </motion.h2>
@@ -85,15 +85,7 @@ useEffect(() => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="h-[2px] bg-gradient-to-r from-orange-500 to-orange-600 mb-4"
           />
-          <motion.p
-            initial={{ opacity: 0, x: -40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="text-base md:text-lg text-gray-300 leading-relaxed font-light"
-          >
-            Our pre-built, customizable solutions are engineered to adapt fast, scale
-            effortlessly, and solve real business problems—delivering value from day one.
-          </motion.p>
+         
         </motion.div>
 
         {/* Cards Grid */}
@@ -115,12 +107,12 @@ useEffect(() => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-medium text-gray-900 mb-3 leading-snug font-sans">
+                  <h3 className="text-xl md:text-2xl font-medium text-gray-900 mb-3 leading-snug font-inter">
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed font-light">
+                  <p className="text-sm md:text-[15px] text-gray-600 leading-relaxed font-normal">
                     {item.description}
                   </p>
                 </div>

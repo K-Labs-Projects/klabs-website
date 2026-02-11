@@ -8,19 +8,22 @@ const ServicesSection = () => {
 
   const services = [
     {
-      title: "Web App Development",
-      description: "Build scalable, secure web applications tailored to your business needs.",
-      image: "/images/web-dev.png"
+      title: "Digital Transformation",
+      description: "Modernize processes, platforms, and decision making at scale.",
+      image: "/images/digital1.png",
+      link: "/services/digital-transformation"
     },
     {
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile solutions for iOS and Android.",
-      image: "/images/mobile-dev.png"
+      title: "AI / ML Solutions",
+      description: "Apply intelligence where it delivers real operational value.",
+      image: "/images/digital3.png",
+      link: "/services/ai-ml-solutions"
     },
     {
-      title: "BPO Service / Data Processing",
-      description: "Professional business process outsourcing and data management solutions.",
-      image: "/images/call-center.png"
+      title: "Data Science & Analytics",
+      description: "Turn data into actionable insight and confident decisions.",
+      image: "/images/digital4.png",
+      link: "/services/data-science-analytics"
     }
   ];
 
@@ -40,53 +43,47 @@ const ServicesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 md:mb-14"
         >
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-sm md:text-base font-medium tracking-[0.3em] text-orange-600 uppercase mb-2"
-          >
-            What We Do
-          </motion.p>
+          
           
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-light text-primary mb-3 font-sans"
+            className="text-3xl md:text-4xl lg:text-5xl font-medium text-primary mb-3"
           >
-            Our <span className="font-normal bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Services</span>
+            Our <span className="font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Services</span>
           </motion.h2>
         </motion.div>
 
         {/* 3 Cards Grid with Proper Spacing */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={service.link}
               initial={{ opacity: 0, y: 60 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.5 + index * 0.2 }}
-              className="relative bg-white/80 backdrop-blur-sm overflow-hidden shadow-lg border border-orange-100/50"
+              className="relative bg-white/80 backdrop-blur-sm overflow-hidden shadow-lg border border-orange-100/50 group hover:shadow-xl transition-shadow duration-300"
             >
               {/* Image */}
               <div className="relative h-44 lg:h-56 overflow-hidden">
                 <img 
                   src={service.image} 
                   alt={service.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
 
               {/* Content */}
               <div className="p-4 lg:p-5">
                 {/* Title */}
-                <h3 className="text-lg md:text-xl font-medium text-primary mb-2 font-sans">
+                <h3 className="text-base md:text-lg font-semibold text-primary mb-2 group-hover:text-orange-500 transition-colors duration-300">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-gray-600 leading-relaxed font-body font-light mb-4">
+                <p className="text-sm text-gray-600 leading-relaxed font-medium mb-4">
                   {service.description}
                 </p>
 
@@ -99,12 +96,12 @@ const ServicesSection = () => {
                 ></motion.div>
 
                 {/* Learn More Link */}
-  <button className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors duration-200">
+                <div className="flex items-center gap-2 text-sm font-medium text-gray-700 group-hover:text-orange-500 transition-colors duration-200">
                   Learn More
                   <HiArrowRight className="w-4 h-4" />
-                </button>
+                </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 

@@ -7,10 +7,10 @@ const Navbar = () => {
   const [hovered, setHovered] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const menuItems = [
-    { title: 'About Us', href: '#about' },
+const menuItems = [
+    { title: 'About Us', href: '/about', isRoute: true },
     { title: 'Services', href: '/services', isRoute: true },
-{ title: 'Industries', href: '/industries', isRoute: true },
+    { title: 'Industries', href: '/industries', isRoute: true },
     { title: 'Insights', href: '#insights' },
     { title: 'Careers', href: '#careers' },
     { title: 'Contact Us', href: '#contact' },

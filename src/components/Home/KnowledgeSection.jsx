@@ -42,29 +42,21 @@ const KnowledgeSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12 md:mb-16"
         >
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-sm md:text-base font-medium tracking-[0.3em] text-orange-600 uppercase mb-3"
-          >
-            Who We Are
-          </motion.p>
-          
+        
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-primary mb-4 font-sans"
+            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium text-primary mb-4"
           >
-            Knowledge <span className="font-normal bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Empowers</span>
+            Knowledge <span className="font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Empowers</span>
           </motion.h2>
           
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="max-w-4xl mx-auto text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed font-body font-light"
+            className="max-w-4xl mx-auto text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed font-medium"
           >
             We are a trusted technology partner with a strong track record of delivering innovative digital solutions that enable business transformation worldwide.
           </motion.p>
@@ -127,11 +119,11 @@ const StatCard = ({ stat, index, isInView }) => {
           {count.toLocaleString()}{stat.suffix}
         </h3>
         
-        <h4 className="text-lg md:text-xl font-medium text-primary mb-2 font-sans">
+        <h4 className="text-lg md:text-xl font-semibold text-primary mb-2">
           {stat.title}
         </h4>
         
-        <p className="text-sm md:text-base text-gray-600 leading-relaxed font-body font-light">
+        <p className="text-sm md:text-base text-gray-600 leading-relaxed font-medium">
           {stat.description}
         </p>
 
